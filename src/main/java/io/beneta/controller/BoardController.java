@@ -1,7 +1,7 @@
-package io.beneta.board.controller;
+package io.beneta.controller;
 
-import io.beneta.board.model.Board;
-import io.beneta.board.service.BoardService;
+import io.beneta.board.Board;
+import io.beneta.board.BoardService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -17,8 +17,8 @@ public class BoardController {
     private final BoardService boardService;
 
     @PostMapping
-    public Board create(@RequestBody Board bbs) {
-        return boardService.create(bbs);
+    public Board create(@RequestBody Board board) {
+        return boardService.create(board);
     }
     @GetMapping
     public Page<Board> findByTitleContains(Pageable pageable, String keyword) {

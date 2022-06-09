@@ -1,6 +1,6 @@
-package io.beneta.board.repository;
+package io.beneta.board;
 
-import io.beneta.board.model.Board;
+import io.beneta.board.Board;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;

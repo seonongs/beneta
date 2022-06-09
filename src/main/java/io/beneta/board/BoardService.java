@@ -1,14 +1,10 @@
-package io.beneta.board.service;
+package io.beneta.board;
 
-import io.beneta.board.model.Board;
-import io.beneta.board.repository.BoardRepository;
-import org.springframework.boot.context.config.ConfigDataResourceNotFoundException;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.time.LocalDateTime;
 import java.util.Optional;
 
 @Service
