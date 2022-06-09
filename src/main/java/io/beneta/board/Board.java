@@ -26,9 +26,9 @@ public class Board {
     private String writer;
 
     @CreatedDate
-    private LocalDateTime created_date = LocalDateTime.now();
+    private String created_date = String.valueOf(LocalDateTime.now());
     @LastModifiedDate
-    private LocalDateTime modified_date = LocalDateTime.now();
+    private String modified_date = String.valueOf(LocalDateTime.now());
 
     public Board updateBoard(Board board, Long id) {
         this.id = id;

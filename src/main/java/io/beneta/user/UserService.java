@@ -1,6 +1,5 @@
-package io.beneta.config.security.user;
+package io.beneta.user;
 
-import io.beneta.user.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -9,7 +8,7 @@ import org.springframework.stereotype.Service;
 
 @RequiredArgsConstructor
 @Service
-public class CustomUserDetailService implements UserDetailsService {
+public class UserService implements UserDetailsService {
 
     private final UserRepository userRepository;
 
