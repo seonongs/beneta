@@ -28,7 +28,7 @@ public class User implements UserDetails {
     @Column(length = 100, nullable = false, unique = true)
     private String email;
 
-    @Column(length = 30, nullable = false)
+    @Column(length = 200, nullable = false)
     private String password;
 
     @ElementCollection(fetch = FetchType.EAGER)
@@ -37,9 +37,7 @@ public class User implements UserDetails {
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        return this.roles.stream()
-                .map(SimpleGrantedAuthority::new)
-                .collect(Collectors.toList());
+        return this.roles.stream().map(SimpleGrantedAuthority::new).collect(Collectors.toList());
     }
 
     @Override

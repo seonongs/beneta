@@ -28,9 +28,9 @@ public class BoardService {
         return boardRepository.findById(id);
     }
 
-    public Board update(Board board, Long id) {
+    public Board update(Long id, Board board) {
         Board boardCatch = boardRepository.findById(id).orElseThrow(() -> new IllegalArgumentException("오류"));
-        Board saveBoard = boardCatch.updateBoard(board, id);
+        Board saveBoard = boardCatch.updateBoard(id, board);
 
         return Board.builder()
                 .id(saveBoard.getId())

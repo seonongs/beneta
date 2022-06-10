@@ -29,8 +29,8 @@ public class BoardController {
         return boardService.findById(id);
     }
     @PatchMapping("/{id}")
-    public Board update(@PathVariable(value = "id")@RequestBody Board board, Long id) {
-        return boardService.update(board, id);
+    public Board update(@PathVariable(value = "id")Long id, @RequestBody Board board) {
+        return boardService.update(id, board);
     }
     @DeleteMapping("/{id}")
     public Board delete (@PathVariable(value = "id") Long id) {

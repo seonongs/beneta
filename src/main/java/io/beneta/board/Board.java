@@ -26,11 +26,11 @@ public class Board {
     private String writer;
 
     @CreatedDate
-    private String created_date = String.valueOf(LocalDateTime.now());
+    private LocalDateTime created_date = LocalDateTime.now();
     @LastModifiedDate
-    private String modified_date = String.valueOf(LocalDateTime.now());
+    private LocalDateTime modified_date = LocalDateTime.now();
 
-    public Board updateBoard(Board board, Long id) {
+    public Board updateBoard(Long id, Board board) {
         this.id = id;
         this.title = board.getTitle();
         this.content = board.getContent();
